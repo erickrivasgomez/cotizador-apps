@@ -1,22 +1,22 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import { sequelize } from './repositories'
+import { sequelize } from './database/repositories'
 
 const port = 1337
 
 const app = express()
-app.use( bodyParser.json() )
+app.use(bodyParser.json())
 
 //app.use( '/user', userController)
 //app.use( '/post', postController)
 
 app.get('/', (req, res) => {
-    res.send('API is running OK')
+  res.send('API is running OK')
 })
 
 sequelize()
 
-    .authenticate()
+  .authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');
   })
