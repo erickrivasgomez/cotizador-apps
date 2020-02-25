@@ -7,10 +7,8 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
-      },
-      id: {
-        type: Sequelize.UUID
-      },
+      }, 
+     
       content: {
         type: Sequelize.TEXT
       },
