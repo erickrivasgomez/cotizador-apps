@@ -6,7 +6,7 @@ const sequelize = () => {
         dialect: 'mssql',
         port: 5432,
         dialectOptions: {
-            instanceName: "SQLEXPRESS"
+            instanceName: "SQLEXPRESS" // NAME
         }
     });
 }

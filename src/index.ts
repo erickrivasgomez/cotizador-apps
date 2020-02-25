@@ -1,6 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import { sequelize } from './database/repositories'
+import { sequelize } from './database/connection'
 
 const port = 1337
 
