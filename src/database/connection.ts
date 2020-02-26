@@ -1,14 +1,14 @@
-import { Sequelize } from 'sequelize';
 
-const sequelize = () => {
-    return new Sequelize('database', 'user', 'password', {
-        host: 'host',
+import {Sequelize} from 'sequelize-typescript';
+import { Answer } from '../../database/models/answer';
+import { Question } from '../../database/models/question';
+ 
+const sequelize =  new Sequelize({
+        database: 'vmaDB',
         dialect: 'mssql',
-        port: 12345,
-        dialectOptions: {
-            instanceName: "NAME"
-        }
-    });
-}
-
+        username: 'vmaDEV',
+        port: 54321,
+        password: '_Development01@',
+        models: [Answer, Question], 
+});
 export { sequelize }

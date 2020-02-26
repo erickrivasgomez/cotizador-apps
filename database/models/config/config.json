@@ -1,11 +1,10 @@
 {
   "development": {
-    "username": "vmaDEV",
-    "password": "_Development01@",
-    "database": "vmaDB",
+    "username": "root",
+    "password": null,
+    "database": "database_development",
     "host": "127.0.0.1",
-    "dialect": "mssql",
-    "port":"54321",
+    "dialect": "mysql",
     "operatorsAliases": false
   },
   "test": {
