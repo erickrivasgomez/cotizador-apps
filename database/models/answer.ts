@@ -1,21 +1,52 @@
 'use strict';
+import { Table, Column, DataType, Model, BelongsTo, ForeignKey,PrimaryKey } from 'sequelize-typescript';
+import { Question } from './question';
 
-import { Model } from "sequelize/types";
-import Sequelize from 'sequelize';
-import { Question } from "./question";
-const sequelize = require('sequelize');
+@Table
+export class Answer extends Model<Answer> {
 
-export class Answer extends Model {}
-Answer.init({
-  id: Sequelize.INTEGER,
-  content: Sequelize.STRING,
-  path: Sequelize.STRING,
-  value: Sequelize.INTEGER
-}, {sequelize,
-  modelName: 'answer'
-});
+  @PrimaryKey
+  @Column(DataType.NUMBER)
+  id: number
 
-Answer.belongsTo(Question);
+  @Column(DataType.STRING)
+  content: string;
+
+  @Column(DataType.STRING)
+  path: string;
+
+  @Column(DataType.STRING)
+  value: string;
+
+  @ForeignKey(() => Question)
+  @Column
+  questionId: number;
+
+  @BelongsTo(() => Question)
+  question: Question;
+
+
+}
+
+
+// import Sequelize from 'sequelize';
+// import { Question } from "./question";
+// //const sequelize = require('sequelize');
+// import {sequelize} from "../../src/database/connection"
+
+
+
+// export class Answer extends Sequelize.Model {}
+// Answer.init({
+//   id: Sequelize.INTEGER,
+//   content: Sequelize.STRING,
+//   path: Sequelize.STRING,
+//   value: Sequelize.INTEGER
+// }, {sequelize,
+//   modelName: 'answer'
+// });
+
+// Answer.belongsTo(Question);
 
 // module.exports = (sequelize, DataTypes) => {
 //   const Answer = sequelize.define('Answer', {
