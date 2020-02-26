@@ -1,11 +1,10 @@
-//import React from 'react';
 import emailjs from 'emailjs-com';
-//import templateEmail from '../components/template'
 
 const service_id = "default_service";//Gmail
 const template_id = "template_Q8xb3sx7";//Formato de la api
-const template_id_scio = "email_notification_scio";//Email de notificaciones
+const template_id_scio = "email_notification_scio";//Email de notificaciones de Rod
 const user_id = 'user_miSxUoip92knRTffaAMa6';//Llave de mi correo personal {Se cambiara por otro despues}
+const email_scio = "";
 
 export default function sendEmail(e) {//Funcion para mandar email
   e.preventDefault();
@@ -17,7 +16,6 @@ export default function sendEmail(e) {//Funcion para mandar email
     "message_html": "$"+e.target.total.value //La info de interes sobre el costo
    }
 
-   
    emailjs.send(service_id, template_id, template_params, user_id )
    .then((result) => {
       console.log(result.text);
@@ -33,9 +31,9 @@ function sendEmailScio(e){
   var template_params = {
     "from_name": "Scio VMA Notification",
     "name":e.target.user_name.value,
-    "email":e.target.user_email.value, //Correo al que se mandara la info
-    "email_scio":"",
-    "message_html": "$ "+e.target.total.value //La info de interes sobre el costo
+    "email":e.target.user_email.value, 
+    "email_scio": email_scio,
+    "message_html": "$ "+e.target.total.value 
    }
 
    emailjs.send(service_id, template_id_scio, template_params, user_id )
