@@ -1,6 +1,6 @@
 'use strict';
 import { Table, Column, DataType, Model, BelongsTo, ForeignKey,PrimaryKey } from 'sequelize-typescript';
-import { Question } from './question';
+import { Question } from './Question';
 
 @Table
 export class Answer extends Model<Answer> {

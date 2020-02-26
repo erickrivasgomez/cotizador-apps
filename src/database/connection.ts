@@ -1,7 +1,7 @@
 
-import {Sequelize} from 'sequelize-typescript';
-import { Answer } from '../../database/models/answer';
-import { Question } from '../../database/models/question';
+import { Sequelize } from 'sequelize-typescript';
+import { Answer } from './models/Answer';
+import { Question } from './models/Question';
  
 const sequelize =  new Sequelize({
         database: 'vmaDB',
