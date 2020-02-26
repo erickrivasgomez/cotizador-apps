@@ -6,11 +6,11 @@ export default interface IAnswer{
     path: string
 }
 
-class Answer extends Model {}
-Answer.init({
-content: Sequelize.STRING,
-path: Sequelize.TEXT
-value: Sequelize.
-}, { sequelize, modelName: 'answer' });
+// class Answer extends Model {}
+// Answer.init({
+// content: Sequelize.STRING,
+// path: Sequelize.TEXT
+// value: Sequelize.NUMBER
+// }, { sequelize, modelName: 'answer' });
 
-export {Answer}
+// export {Answer}

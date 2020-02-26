@@ -1,13 +1,7 @@
-import Question from '../../database/models/question'
-import db from '../config/database';
-import Gig from '../models/Gig';
+import {Question} from '../../database/models/question'
 import Sequelize from 'sequelize';
-
-const Op = Sequelize.Op;
 
 
 const findbyid = async (id) => {
-    return await Question.find
+        return await Question.findByPk(id)
 }
-
-Question.findByPk(id).then(question => {})
