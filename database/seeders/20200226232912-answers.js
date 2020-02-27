@@ -260,14 +260,6 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        content: "I don't know",
-        path: "",
-        value: 0,
-        questionId: 9,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      },
-      {
         content: "0 - 3 months",
         path: "",
         value: 1.5,
