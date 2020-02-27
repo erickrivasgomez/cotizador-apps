@@ -236,7 +236,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        content: "Yes",
+        content: "It's only an idea",
         path: "",
         value: 0,
         questionId: 9,
@@ -244,7 +244,7 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        content: "No",
+        content: "Prepared sketch",
         path: "",
         value: 0,
         questionId: 9,
@@ -252,7 +252,15 @@ module.exports = {
         updatedAt: new Date(),
       },
       {
-        content: "I don't know",
+        content: "The app is in development",
+        path: "",
+        value: 0,
+        questionId: 9,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        content: "the app has already been developed",
         path: "",
         value: 0,
         questionId: 9,
