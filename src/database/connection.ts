@@ -4,11 +4,11 @@ import { Answer } from './models/Answer';
 import { Question } from './models/Question';
  
 const sequelize =  new Sequelize({
-        database: 'vmaDB',
+        host: '10.16.0.19',
+        database: 'valuemyappdevdb',
         dialect: 'mssql',
-        username: 'vmaDEV',
-        port: 54321,
-        password: '_Development01@',
+        username: 'valuemyappdevdbusr',
+        password: 'N7JB4qx.u9C+',
         models: [Answer, Question], 
 });
 export { sequelize }

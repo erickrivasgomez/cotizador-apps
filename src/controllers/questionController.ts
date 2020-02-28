@@ -5,9 +5,9 @@ export const questionController = Router()
 
 questionController.get('/', async (req, res) => {
     
-    const question = await questionRepository.findAll()
-    if (question) {
-        res.status(200).json({ message: 'OK', question })
+    const questions = await questionRepository.findAll()
+    if (questions) {
+        res.status(200).json({ questions })
     } else {
         res.status(400).json({ err : 'Bad Request'})
     }
